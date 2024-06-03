@@ -1,0 +1,375 @@
+
+:root{
+
+    --menu-btn-color: rgb(99, 170, 177);
+    --second-color: rgb(129, 127, 127);
+ 
+  
+     --link-color: aquamarine;
+
+     --black-suave: rgb(19, 19, 19);
+   
+  
+  }
+  
+ 
+*,*::after, *::before {
+  box-sizing: inherit;
+  }
+  
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, red 0, var(--rose-color) 20%);
+    
+}
+
+
+
+  
+  
+  
+  
+    @font-face {
+   
+      font-family: "fuente-mia";
+      src: url("../assets/Fuente_mia_ultima-Regular.ttf");
+    } 
+  
+  
+    html{
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      
+      font-size: 16px;
+      font-family: "fuente-mia";
+     
+      font-weight: bold;
+     
+  }
+  
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  h1, h2, h3, h4, h5, h6{
+    display: inline-block;
+    background-color: transparent;
+    margin: 30px 0;
+
+    color: aliceblue;
+  }
+  
+  h1{
+    font-size: 2.5rem;
+    
+  }
+  
+  
+  h2{
+    font-size: 2.25rem;
+  }
+  
+  
+  h3{
+    font-size: 2rem;
+  }
+  
+  
+  h4{
+    font-size: 1.75rem;
+  }
+  
+  
+  h5{
+    font-size: 1.5rem;
+  }
+  
+  
+  h6{
+    font-size: 1.25rem;
+  }
+  
+  
+  
+.isa-home a{
+    position: absolute;
+    font-size: 20px;
+    color: var(--menu-btn-color);
+    text-decoration: none;
+    left: 15%;
+    bottom: 20px;
+
+}
+  
+      /* ********** Menu ********** */
+      .menu-btn {
+        /*outline: thin solid var(--first-color);*/
+        border: 0;
+        cursor: pointer;
+        background-color: rgb(21, 21, 21, 0);
+        margin-left: 85%;
+        margin-top: -10px;
+        
+      }
+      
+      .menu-btn svg {
+        fill: var(--menu-btn-color);
+          
+      }
+      
+      .menu {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(5, 5, 5, 0.75);
+        
+        opacity: 0;  /*solo se verá cuando sea activo*/
+        pointer-events: none;
+        transition: opacity 0.8s ease;
+        z-index: -1;
+      }
+      
+      .menu.is-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+      .menu a {
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-weight: 100;
+        text-align: center;
+        text-decoration: none;
+        color: var(--menu-btn-color);
+      }
+      
+      .menu a:hover {
+        color: gray;
+        /*background-color: var(--second-color);*/
+        font-size: 1.5rem;
+      }
+  
+      .none {
+        display: none;
+      }
+      
+      
+      /*  @media screen and (min-width: 1024px) {
+        
+        
+        
+        .menu-btn {
+          display: none;
+        }
+      
+        .menu {
+          position: sticky;
+          width: auto;
+          flex-direction: row;
+          opacity: 1;
+          pointer-events: auto;
+          top: 0;
+          left: 75%;
+          padding-top: 5px;
+          z-index: 0; 
+        }
+      
+        .menu a {
+            font-size: 1.2rem;
+          padding: 0 0.4rem;
+          color: var(--first-color);
+          
+        }
+      
+        .menu a:last-child { 
+          padding-right: 0;
+          margin-right: 1rem;
+        }
+      
+        .menu a:hover {
+          background-color: transparent;
+          font-size: 1.2rem;
+          
+        }
+      } */
+      
+  
+       
+ 
+  
+    @media screen and (min-width: 430px){
+     
+    
+  
+      
+  .menu-btn{
+    margin-left: 98%;
+  }
+ 
+  
+  .font-size{
+    font-size: 0.2px;
+  }
+  
+    
+  
+.isa-home a{
+
+  left: 25%;
+ 
+
+}
+
+  
+    }
+  
+  
+  
+      /*---------VERSIÓN TABLET / DESKTOP--------------*/
+  
+    @media screen and (min-width: 768px){
+    
+  .menu-btn{
+    margin-left: 80%;
+  }
+  
+   
+  .font-size{
+    font-size: 0.25px;
+  }
+  
+  
+  
+  
+  
+  
+    }
+  
+  
+  
+  
+  
+    @media screen and (min-width: 1024px){
+    
+  
+  .menu-btn{
+    margin-left: 88%;
+  }
+  
+  
+    }
+  
+  
+  
+    .no-activo { 
+      pointer-events: none; 
+      cursor: default; 
+    }
+     
+  
+  
+  
+  
+  /*FOOTER*/
+  
+  
+  .footer {
+      /*margin-bottom: var(--header-height); /*para que se vea en mobile y no 
+      lo tape el header */
+      padding-top: 15px;
+      text-align: center;
+     
+   z-index: 100;
+   position: relative;
+      height: 100px;
+     /*  background: linear-gradient(0deg, black 0, rgb(47, 47, 47)100%);
+   */
+    background-color: var(--black-suave);
+      
+    }
+    
+    footer a{
+      
+      color: rgb(92, 90, 101);
+      text-decoration: none;
+      font-size: 16px;
+    }
+    
+  
+    
+  
+  /*HEADER*/
+  
+  
+  .header {
+      position: fixed;
+    /* .menu-bt */
+      bottom: 0;
+      z-index: 990;
+    
+      width: 80%;
+      height: 40px;
+      
+    }
+    
+    .header > .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      
+    }
+    
+  
+  
+  
+  
+  
+  
+    /*Media query versión desktop*/
+  
+    @media screen and (min-width: 1024px) {
+  
+      
+    
+      .footer {
+        margin-bottom: 0; /*que el footer quede abajo de nuevo, ya que en
+        desktop no está el header abajo*/
+        width: 100%;
+      }
+  
+     
+    /* 
+      .header {
+        position: sticky; 
+        top: 0;
+        
+        padding: 0.5rem;
+        height: calc(var(--header-height) - 0.2rem);
+      }
+   */
+      .menu {
+          background-color: rgb(211, 22, 22, 0);
+          background-color: rgba(5, 5, 5, 0.75);
+      }
+  
+  
+    
+    }
+  
+    
